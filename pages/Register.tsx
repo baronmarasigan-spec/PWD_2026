@@ -509,7 +509,7 @@ export const Register: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans flex flex-col lg:flex-row overflow-hidden relative">
+    <div className="h-screen bg-slate-50 font-sans flex flex-col lg:flex-row overflow-hidden relative">
       {toast && (
         <div className={`fixed top-5 right-5 z-50 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in font-bold text-sm ${toast.type === "success" ? "bg-emerald-600 border border-emerald-500 shadow-xl" : "bg-red-600 border border-red-500 shadow-xl"}`}>
           {toast.type === "success" ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
