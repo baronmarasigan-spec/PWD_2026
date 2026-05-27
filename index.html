@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWDConnect - Persons with Disabilities Management System</title>
+    <script>
+      // Suppress Tailwind CDN warning for this preview environment
+      const originalWarn = console.warn;
+      console.warn = function(...args) {
+        if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com should not be used in production')) return;
+        originalWarn.apply(console, args);
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              primary: {
+                50: '#fef2f2',
+                100: '#fee2e2',
+                500: '#dc2626',
+                600: '#b91c1c',
+                700: '#991b1b',
+              },
+              secondary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#1e419c',
+                600: '#15327a',
+                700: '#1e419c',
+              },
+              pdao_blue: '#1e419c',
+              pdao_red: '#dc2626',
+            },
+            borderRadius: {
+              'xl': '1rem',
+              '2xl': '1.5rem',
+              '3xl': '2rem',
+              '4xl': '3rem',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+              'scale-up': 'scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              'slide-up': 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleUp: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "url": "https://esm.sh/url@^0.11.4",
+    "express": "https://esm.sh/express@^5.2.1",
+    "path": "https://esm.sh/path@^0.12.7"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

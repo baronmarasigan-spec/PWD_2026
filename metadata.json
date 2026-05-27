@@ -1,0 +1,8 @@
+{
+  "name": "Remix: San Juan PWDConnect 5.22",
+  "description": "Unified platform for San Juan City Persons with Disabilities (PWDs), facilitating digital ID issuance, welfare benefit coordination, and community support.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
